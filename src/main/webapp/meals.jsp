@@ -57,18 +57,18 @@
         <tbody>
         <jsp:useBean id="mealsTo" scope="request" type="java.util.Collection"/>
         <c:forEach var="mealTo" items = "${requestScope.mealsTo}">
-            <tr style="color:  ${mealTo.isExcess ?  '#ff3e25' : '#33bf49 '}">
+            <tr style="color:  ${mealTo.excess ?  '#ff3e25' : '#33bf49 '}">
                     <%--<td>${meal.getId()}</td>--%>
                 <td>
-                    <javatime:parseLocalDateTime value="${mealTo.getDateTime}" pattern="yyyy-MM-dd'T'HH:mm" var="parsed"/>
+                    <javatime:parseLocalDateTime value="${mealTo.dateTime}" pattern="yyyy-MM-dd'T'HH:mm" var="parsed"/>
                     <javatime:format value="${parsed}" style="FS"/>
                 </td>
 
-                <td>${mealTo.getDescription}</td>
-                <td>${mealTo.getCalories}</td>
+                <td>${mealTo.description}</td>
+                <td>${mealTo.calories}</td>
 
-                <td><a class="edit" href="meals?action=edit&id=${mealTo.getId}">Edit</a></td>
-                <td><a class="delete" href="meals?action=delete&id=${mealTo.getId()}">Delete</a></td>
+                <td><a class="edit" href="meals?action=edit&id=${mealTo.id}">Edit</a></td>
+                <td><a class="delete" href="meals?action=delete&id=${mealTo.id}">Delete</a></td>
             </tr>
 
         </c:forEach>

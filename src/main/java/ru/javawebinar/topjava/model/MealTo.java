@@ -10,7 +10,7 @@ public class MealTo {
     private final String description;
 
     private final int calories;
-    private int id;
+    private final int id;
 
 
     //    private final AtomicBoolean excess;      // filteredByAtomic (or Boolean[])
@@ -18,7 +18,8 @@ public class MealTo {
 //    private final Supplier<Boolean> excess;  // filteredByClosure
     private boolean excess;
 
-    public MealTo(LocalDateTime dateTime, String description, int calories, boolean excess) {
+    public MealTo(int id, LocalDateTime dateTime, String description, int calories, boolean excess) {
+        this.id = id;
         this.dateTime = dateTime;
         this.description = description;
         this.calories = calories;
@@ -44,7 +45,7 @@ public class MealTo {
                 '}';
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
