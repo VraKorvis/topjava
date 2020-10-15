@@ -26,7 +26,7 @@ public class MealTo {
     }
 
 //    public Boolean getExcess() {
-//        return excess.get();
+//        return excess;
 //    }
 
     // for filteredBySetterRecursion
@@ -44,7 +44,7 @@ public class MealTo {
                 '}';
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
@@ -68,7 +68,7 @@ public class MealTo {
         return calories;
     }
 
-    public boolean isExceed() {
+    public boolean isExcess() {
         return excess;
     }
 
